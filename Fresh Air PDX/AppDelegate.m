@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <UIKit/UIKit.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIFont *navigationBarFont = [UIFont fontWithName:@"Avenir" size:16.f];
+    NSDictionary *titleTextAttributes = @{NSFontAttributeName : navigationBarFont};
+    [[UINavigationBar appearance] setTitleTextAttributes:titleTextAttributes];
+    
     return YES;
 }
 

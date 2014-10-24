@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		946B8D4E19F896D10025F4C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 946B8D4D19F896D10025F4C1 /* main.m */; };
 		946B8D5119F896D10025F4C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 946B8D5019F896D10025F4C1 /* AppDelegate.m */; };
-		946B8D5419F896D10025F4C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946B8D5319F896D10025F4C1 /* ViewController.m */; };
 		946B8D5719F896D10025F4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946B8D5519F896D10025F4C1 /* Main.storyboard */; };
 		946B8D5919F896D10025F4C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946B8D5819F896D10025F4C1 /* Images.xcassets */; };
 		946B8D5C19F896D10025F4C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946B8D5A19F896D10025F4C1 /* LaunchScreen.xib */; };
 		946B8D6819F896D10025F4C1 /* Fresh_Air_PDXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 946B8D6719F896D10025F4C1 /* Fresh_Air_PDXTests.m */; };
+		946B8D7519F8982E0025F4C1 /* Park.m in Sources */ = {isa = PBXBuildFile; fileRef = 946B8D7419F8982E0025F4C1 /* Park.m */; };
+		946B8D7819F8983E0025F4C1 /* DataCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 946B8D7719F8983E0025F4C1 /* DataCoordinator.m */; };
+		9486BAB819F9F3AC00110F09 /* ParksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486BAB719F9F3AC00110F09 /* ParksListViewController.m */; };
+		9486BABD19FAD7DA00110F09 /* ParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486BABC19FAD7DA00110F09 /* ParkTableViewCell.m */; };
+		9486BAC019FAE0CD00110F09 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486BABF19FAE0CD00110F09 /* LocationManager.m */; };
+		9486BAC419FAFA9D00110F09 /* ParkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486BAC319FAFA9D00110F09 /* ParkDetailViewController.m */; };
+		9486BAC619FB006200110F09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9486BAC519FB006200110F09 /* UIKit.framework */; };
+		9486BAC819FB006800110F09 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9486BAC719FB006800110F09 /* CoreLocation.framework */; };
+		9486BACA19FB006D00110F09 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9486BAC919FB006D00110F09 /* MapKit.framework */; };
+		94A58BBD19FB0410005B9B54 /* ParkAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A58BBC19FB0410005B9B54 /* ParkAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +41,29 @@
 		946B8D4D19F896D10025F4C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		946B8D4F19F896D10025F4C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		946B8D5019F896D10025F4C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		946B8D5219F896D10025F4C1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		946B8D5319F896D10025F4C1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		946B8D5619F896D10025F4C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		946B8D5819F896D10025F4C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		946B8D5B19F896D10025F4C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		946B8D6119F896D10025F4C1 /* Fresh Air PDXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fresh Air PDXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		946B8D6619F896D10025F4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946B8D6719F896D10025F4C1 /* Fresh_Air_PDXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fresh_Air_PDXTests.m; sourceTree = "<group>"; };
+		946B8D7319F8982E0025F4C1 /* Park.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Park.h; path = Model/Park.h; sourceTree = "<group>"; };
+		946B8D7419F8982E0025F4C1 /* Park.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Park.m; path = Model/Park.m; sourceTree = "<group>"; };
+		946B8D7619F8983E0025F4C1 /* DataCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataCoordinator.h; path = Controller/DataCoordinator.h; sourceTree = "<group>"; };
+		946B8D7719F8983E0025F4C1 /* DataCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataCoordinator.m; path = Controller/DataCoordinator.m; sourceTree = "<group>"; };
+		9486BAB619F9F3AC00110F09 /* ParksListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParksListViewController.h; sourceTree = "<group>"; };
+		9486BAB719F9F3AC00110F09 /* ParksListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParksListViewController.m; sourceTree = "<group>"; };
+		9486BABB19FAD7DA00110F09 /* ParkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkTableViewCell.h; sourceTree = "<group>"; };
+		9486BABC19FAD7DA00110F09 /* ParkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkTableViewCell.m; sourceTree = "<group>"; };
+		9486BABE19FAE0CD00110F09 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		9486BABF19FAE0CD00110F09 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		9486BAC219FAFA9D00110F09 /* ParkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkDetailViewController.h; sourceTree = "<group>"; };
+		9486BAC319FAFA9D00110F09 /* ParkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkDetailViewController.m; sourceTree = "<group>"; };
+		9486BAC519FB006200110F09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9486BAC719FB006800110F09 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9486BAC919FB006D00110F09 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		94A58BBB19FB0410005B9B54 /* ParkAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkAnnotation.h; sourceTree = "<group>"; };
+		94A58BBC19FB0410005B9B54 /* ParkAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9486BACA19FB006D00110F09 /* MapKit.framework in Frameworks */,
+				9486BAC819FB006800110F09 /* CoreLocation.framework in Frameworks */,
+				9486BAC619FB006200110F09 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,9 @@
 		946B8D3F19F896D10025F4C1 = {
 			isa = PBXGroup;
 			children = (
+				9486BAC919FB006D00110F09 /* MapKit.framework */,
+				9486BAC719FB006800110F09 /* CoreLocation.framework */,
+				9486BAC519FB006200110F09 /* UIKit.framework */,
 				946B8D4A19F896D10025F4C1 /* Fresh Air PDX */,
 				946B8D6419F896D10025F4C1 /* Fresh Air PDXTests */,
 				946B8D4919F896D10025F4C1 /* Products */,
@@ -81,10 +111,12 @@
 		946B8D4A19F896D10025F4C1 /* Fresh Air PDX */ = {
 			isa = PBXGroup;
 			children = (
+				946B8D7119F897D90025F4C1 /* Controller */,
+				946B8D7219F897E10025F4C1 /* Model */,
 				946B8D4F19F896D10025F4C1 /* AppDelegate.h */,
 				946B8D5019F896D10025F4C1 /* AppDelegate.m */,
-				946B8D5219F896D10025F4C1 /* ViewController.h */,
-				946B8D5319F896D10025F4C1 /* ViewController.m */,
+				9486BAB919F9F3B900110F09 /* Parks List */,
+				9486BAC119FAFA4D00110F09 /* Park Detail */,
 				946B8D5519F896D10025F4C1 /* Main.storyboard */,
 				946B8D5819F896D10025F4C1 /* Images.xcassets */,
 				946B8D5A19F896D10025F4C1 /* LaunchScreen.xib */,
@@ -117,6 +149,56 @@
 				946B8D6619F896D10025F4C1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		946B8D7119F897D90025F4C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				946B8D7619F8983E0025F4C1 /* DataCoordinator.h */,
+				946B8D7719F8983E0025F4C1 /* DataCoordinator.m */,
+				9486BABE19FAE0CD00110F09 /* LocationManager.h */,
+				9486BABF19FAE0CD00110F09 /* LocationManager.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		946B8D7219F897E10025F4C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				946B8D7319F8982E0025F4C1 /* Park.h */,
+				946B8D7419F8982E0025F4C1 /* Park.m */,
+				94A58BBB19FB0410005B9B54 /* ParkAnnotation.h */,
+				94A58BBC19FB0410005B9B54 /* ParkAnnotation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9486BAB919F9F3B900110F09 /* Parks List */ = {
+			isa = PBXGroup;
+			children = (
+				9486BABA19FAD75400110F09 /* Cell */,
+				9486BAB619F9F3AC00110F09 /* ParksListViewController.h */,
+				9486BAB719F9F3AC00110F09 /* ParksListViewController.m */,
+			);
+			name = "Parks List";
+			sourceTree = "<group>";
+		};
+		9486BABA19FAD75400110F09 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9486BABB19FAD7DA00110F09 /* ParkTableViewCell.h */,
+				9486BABC19FAD7DA00110F09 /* ParkTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9486BAC119FAFA4D00110F09 /* Park Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9486BAC219FAFA9D00110F09 /* ParkDetailViewController.h */,
+				9486BAC319FAFA9D00110F09 /* ParkDetailViewController.m */,
+			);
+			name = "Park Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +301,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				946B8D5419F896D10025F4C1 /* ViewController.m in Sources */,
+				9486BABD19FAD7DA00110F09 /* ParkTableViewCell.m in Sources */,
+				94A58BBD19FB0410005B9B54 /* ParkAnnotation.m in Sources */,
+				9486BAC019FAE0CD00110F09 /* LocationManager.m in Sources */,
+				946B8D7819F8983E0025F4C1 /* DataCoordinator.m in Sources */,
 				946B8D5119F896D10025F4C1 /* AppDelegate.m in Sources */,
 				946B8D4E19F896D10025F4C1 /* main.m in Sources */,
+				9486BAC419FAFA9D00110F09 /* ParkDetailViewController.m in Sources */,
+				9486BAB819F9F3AC00110F09 /* ParksListViewController.m in Sources */,
+				946B8D7519F8982E0025F4C1 /* Park.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Fresh Air PDX/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Fresh Air PDX/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +502,7 @@
 				946B8D6D19F896D10025F4C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		946B8D6E19F896D10025F4C1 /* Build configuration list for PBXNativeTarget "Fresh Air PDXTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +511,7 @@
 				946B8D7019F896D10025F4C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

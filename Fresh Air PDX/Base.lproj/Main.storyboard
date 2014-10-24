@@ -1,25 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tli-Zr-zIe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Navigation Controller-->
+        <scene sceneID="MYa-KI-i2s">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <navigationController id="Tli-Zr-zIe" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zOi-jK-g0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gja-Jh-Qi0" kind="relationship" relationship="rootViewController" id="efZ-Zz-tJo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w32-hd-k6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-61" y="295"/>
+        </scene>
+        <!--Parks-->
+        <scene sceneID="gqf-UO-4Jc">
+            <objects>
+                <viewController id="gja-Jh-Qi0" customClass="ParksListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HTn-77-Z4a"/>
+                        <viewControllerLayoutGuide type="bottom" id="fGY-VG-wbP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RPs-je-0Ux">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NBd-sn-Kj7">
+                                <rect key="frame" x="0.0" y="6" width="320" height="562"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="parkCell" id="JXg-nd-UxA" customClass="ParkTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JXg-nd-UxA" id="EDm-Kk-nA6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Park Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I01-Vj-KR7">
+                                                    <rect key="frame" x="8" y="9" width="279" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqX-As-zel">
+                                                    <rect key="frame" x="8" y="31" width="279" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="ZqX-As-zel" id="BYs-wf-C2u"/>
+                                            <outlet property="parkNameLabel" destination="I01-Vj-KR7" id="hL9-0Q-2Fz"/>
+                                            <segue destination="I0v-j5-wYt" kind="show" id="Aex-XJ-SHF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gja-Jh-Qi0" id="bhE-TJ-c94"/>
+                                    <outlet property="delegate" destination="gja-Jh-Qi0" id="bED-mK-6rY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NBd-sn-Kj7" secondAttribute="trailing" id="1ey-4u-q1R"/>
+                            <constraint firstItem="NBd-sn-Kj7" firstAttribute="top" secondItem="HTn-77-Z4a" secondAttribute="bottom" constant="-58" id="5GY-Nf-BGe"/>
+                            <constraint firstItem="NBd-sn-Kj7" firstAttribute="leading" secondItem="RPs-je-0Ux" secondAttribute="leading" id="WcN-D4-eb9"/>
+                            <constraint firstItem="fGY-VG-wbP" firstAttribute="top" secondItem="NBd-sn-Kj7" secondAttribute="bottom" id="b2W-aE-Fym"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Parks" id="B0D-PZ-cxs"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="parksListTableView" destination="NBd-sn-Kj7" id="Yg0-tY-ZSH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVv-NM-dPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="286"/>
+        </scene>
+        <!--Park Detail View Controller-->
+        <scene sceneID="Gzy-CK-wQk">
+            <objects>
+                <viewController id="I0v-j5-wYt" customClass="ParkDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VbT-p4-0b2"/>
+                        <viewControllerLayoutGuide type="bottom" id="JSK-QL-6Ev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ozu-Km-Dhp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XnH-J8-nla">
+                                <rect key="frame" x="40" y="85" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Fhx-NO-nEH"/>
+                                    <constraint firstAttribute="height" constant="240" id="fvw-4q-8kw"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amenities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="JZ8-gh-GRT">
+                                <rect key="frame" x="122" y="333" width="76" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="92" id="4Od-Yx-hjr"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="JGB-hq-wYX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XnH-J8-nla" secondAttribute="centerX" id="3tq-j1-6K4"/>
+                            <constraint firstItem="JZ8-gh-GRT" firstAttribute="top" secondItem="XnH-J8-nla" secondAttribute="bottom" constant="8" id="QrT-Eu-zSq"/>
+                            <constraint firstAttribute="centerX" secondItem="JZ8-gh-GRT" secondAttribute="centerX" id="teb-61-CSF"/>
+                            <constraint firstItem="XnH-J8-nla" firstAttribute="top" secondItem="VbT-p4-0b2" secondAttribute="bottom" constant="21" id="x2U-gh-kPP"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="amenitiesLabel" destination="JZ8-gh-GRT" id="ZMW-9c-n0V"/>
+                        <outlet property="mapView" destination="XnH-J8-nla" id="jR9-Mw-8uL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wvx-4A-pzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="286"/>
         </scene>
     </scenes>
 </document>
