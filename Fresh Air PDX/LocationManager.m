@@ -40,14 +40,34 @@
 {
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
-    if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [_locationManager requestWhenInUseAuthorization];
-    }
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     //update every km of change
     _locationManager.distanceFilter = 1000;
-    [_locationManager startUpdatingLocation];
     
+    if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self checkStatus:[CLLocationManager authorizationStatus]];
+    } else
+    {
+        [_locationManager startUpdatingLocation];
+    }
+
+
+
+    
+}
+
+- (void)checkStatus:(CLAuthorizationStatus)status
+{
+    //technically don't need authorized always but keep it in here for sanity
+    if(status == kCLAuthorizationStatusAuthorized ||
+       status == kCLAuthorizationStatusAuthorizedAlways ||
+       status == kCLAuthorizationStatusAuthorizedWhenInUse)
+    {
+        [_locationManager startUpdatingLocation];
+    } else
+    {
+        [_locationManager requestWhenInUseAuthorization];
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -61,5 +81,13 @@
                      didupdateLocation:newLocation.coordinate];
     }
 }
+
+- (void)locationManager:(CLLocationManager *)manager
+didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    
+    [self checkStatus:status];
+}
+
 
 @end

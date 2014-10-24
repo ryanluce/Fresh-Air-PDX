@@ -63,7 +63,7 @@
     //TODO switch to NSOperation
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0);
     dispatch_async(queue, ^{
-        NSString *apiCallWithLocation = [NSString stringWithFormat:@"%@%f,%f", kApiURL, latitude, longitude];
+        NSString *apiCallWithLocation = [NSString stringWithFormat:@"%@near/%f,%f", kApiURL, longitude, latitude];
         NSURL *jsonDataURL = [NSURL URLWithString:[self addCountToURL:apiCallWithLocation]];
         NSData *jsonData = [NSData dataWithContentsOfURL:jsonDataURL];
         dispatch_sync(dispatch_get_main_queue(), ^{
